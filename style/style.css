@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Quantico', sans-serif;
+}
+
+body{
+    overflow-x: none;
+}
+
+/* No Select */
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+/* No Select ends */
+
+/* Scrollbar Css */
+body::-webkit-scrollbar {
+    width: 0.1rem;
+}
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+/* Scrollbar Css ends */
+
+body{
+    background: #121113;
+    height: 500vh;
+    cursor: default;
+}
+
+
+/* Navbar */
+nav{
+    top: 0;
+    position: sticky;
+}
+
+nav .navContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 3rem;
+}
+
+nav .navContainer .logo img{
+    width: 3rem;
+}
+
+nav .navContainer .links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+nav .navContainer .links .link{
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+nav .navContainer .menu{
+    display: none;
+}
+/* Navbar ends */
+
+/* Header starts */
+header{
+    padding: 0 20rem;
+    padding-top: 2.5rem;
+    position: relative;
+    min-height: 100vh;
+}
+
+header .top{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .top .tagline{
+    position: relative;
+    width: fit-content;
+    /* top: 10%; */
+    left: -12%;
+    z-index: 100;
+    text-align: right;
+    /* transform: translate(-75.04px, 62.48px); */
+    opacity: 1;
+}
+
+header .top .tagline .text{
+    font-size: 4rem;
+    line-height: 4rem;
+    color: #eaeaea;
+}
+
+/* header .ieee-logo{
+    position: absolute;
+    right: 20%;
+    top: 35%;
+    transform: translate(-75.04px, 22.48px);
+} */
+
+header .top .ieee-logo img{
+    width: 15rem;
+}
+
+header .aboutUsBtn button{
+    position: absolute;
+    bottom: 20%;
+    right: 6%;
+    outline: none;
+    padding: 0.6rem 4rem;
+    background-color: transparent;
+    border: 3px solid #006EB6;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    font-size: 1.2rem;
+    color: #006EB6;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+video{
+    object-fit: contain;
+}
+
+#myVideo{
+    position: absolute;
+    left: 0;
+    bottom: -7%;
+    width: 100% !important;
+    min-height: 100vh;
+    z-index: -10000;
+    transform: translateY(7%);
+}
+/* Header ends */
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
