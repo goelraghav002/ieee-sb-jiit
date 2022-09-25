@@ -36,7 +36,6 @@ body::-webkit-scrollbar-thumb {
 
 body{
     background: #121113;
-    height: 500vh;
     cursor: default;
 }
 
@@ -45,6 +44,8 @@ body{
 nav{
     top: 0;
     position: sticky;
+    z-index: 1000;
+    background-color: #121113;
 }
 
 nav .navContainer{
@@ -77,6 +78,7 @@ nav .navContainer .menu{
 }
 /* Navbar ends */
 
+
 /* Header starts */
 header{
     padding: 0 20rem;
@@ -87,7 +89,6 @@ header{
 
 header .top{
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-around;
 }
@@ -95,12 +96,10 @@ header .top{
 header .top .tagline{
     position: relative;
     width: fit-content;
-    /* top: 10%; */
-    left: -12%;
     z-index: 100;
     text-align: right;
-    /* transform: translate(-75.04px, 62.48px); */
     opacity: 1;
+    padding-bottom: 2rem;
 }
 
 header .top .tagline .text{
@@ -108,13 +107,6 @@ header .top .tagline .text{
     line-height: 4rem;
     color: #eaeaea;
 }
-
-/* header .ieee-logo{
-    position: absolute;
-    right: 20%;
-    top: 35%;
-    transform: translate(-75.04px, 22.48px);
-} */
 
 header .top .ieee-logo img{
     width: 15rem;
@@ -145,15 +137,83 @@ video{
     left: 0;
     bottom: -7%;
     width: 100% !important;
-    min-height: 100vh;
+    min-height: 10vh;
     z-index: -10000;
     transform: translateY(7%);
 }
 /* Header ends */
 
+@media only screen and (max-width: 1220px) {
+    #myVideo{
+        bottom: 5%;
+    }
 
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: lightblue;
+    header .top .tagline{
+        padding-right: 10rem;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    #myVideo{
+        bottom: 10%;
+    }
+
+    header .top .tagline{
+        padding-right: 4rem;
+    }
+}
+@media only screen and (max-width: 800px) {
+    
+    nav .navContainer .links{
+        display: none;
+    }   
+    
+    #myVideo{
+        bottom: 15%;
+    }
+
+    header .top .tagline{
+        padding-right: 4rem;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    header .top{
+        flex-direction: column;
+    } 
+
+    header .top .tagline{
+        padding-right: 0rem;
+    }
+
+    header{
+        padding: 2rem 0;
+    }
+
+    header .top .tagline .text{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    header .top .ieee-logo img{
+        width: 12rem;
+    }
+
+    #myVideo{
+        bottom: 20%;
+        /* transform: translateY(5%); */
+    }
+    
+}
+
+@media only screen and (max-width: 500px) {
+    #myVideo{
+        bottom: 25%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    header .aboutUsBtn button{
+        padding: 0.6rem 3rem;
+        font-size: 1rem;
     }
 }
