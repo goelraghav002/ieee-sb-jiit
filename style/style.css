@@ -203,6 +203,10 @@ video{
         /* transform: translateY(5%); */
     }
     
+    nav .navContainer{
+        padding: 1rem 1rem;
+    }
+
 }
 
 @media only screen and (max-width: 500px) {
