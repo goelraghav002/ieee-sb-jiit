@@ -143,6 +143,14 @@ video{
 }
 /* Header ends */
 
+@media only screen and (min-width: 1220px) {
+    
+
+    header .top .tagline{
+        left: -10%;
+    }
+}
+
 @media only screen and (max-width: 1220px) {
     #myVideo{
         bottom: 5%;
