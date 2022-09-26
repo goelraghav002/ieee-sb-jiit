@@ -162,7 +162,7 @@ video{
 }
 @media only screen and (max-width: 1000px) {
     #myVideo{
-        bottom: 10%;
+        bottom: 15%;
     }
 
     header .top .tagline{
@@ -198,12 +198,13 @@ video{
     }
 
     header .top .tagline .text{
-        font-size: 3rem;
+        font-size: 2.5rem;
         line-height: 3rem;
     }
 
     header .top .ieee-logo img{
         width: 12rem;
+        padding-bottom: 1rem;
     }
 
     #myVideo{
