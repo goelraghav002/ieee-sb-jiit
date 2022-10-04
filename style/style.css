@@ -261,13 +261,14 @@ video{
         height: 100vh;
         width: 100%;
         overflow: hidden;
-        /* transform: translateX(0%); */
-        transition: all 0.3s;
+        transform: translate(0%);
+        transition: all 0.5s linear;
 
     }
 
     nav .navContainer .none{
         visibility: hidden;
+        overflow: hidden;
     }
 
     .bar .color-white{
