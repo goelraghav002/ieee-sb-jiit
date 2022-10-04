@@ -1,22 +1,36 @@
 const menu = document.querySelector('#check');
-const sideBar = document.getElementById("sideBar");
-sideBar.style.maxWidth = "0%";
 
 menu.addEventListener("click", clicked);
 
 
 function clicked() {
+    console.log(menu.checked);
+    console.log("Clicked");
 
-    if (sideBar.style.maxWidth == "0%") {
-        sideBar.style.maxWidth = "100%";
+    openSidebar();
+
+}
+
+function openSidebar() {
+    if (menu.checked) {
+        document.querySelector('.links').classList.remove('none');
+        document.querySelector('.links').classList.toggle('styles');
         document.querySelector('.color1').classList.add('color-black');
         document.querySelector('.color1').classList.remove('color-white');
         document.querySelector('.color2').classList.add('color-black');
         document.querySelector('.color2').classList.remove('color-white');
         document.querySelector('.color3').classList.add('color-black');
         document.querySelector('.color3').classList.remove('color-white');
-    } else {
-        sideBar.style.maxWidth = "0%";
+    }
+
+    menu.addEventListener('click', close);
+}
+
+
+function close() {
+    if (!menu.checked) {
+        document.querySelector('.links').classList.add('none');
+        document.querySelector('.links').classList.remove('styles');
         document.querySelector('.color1').classList.remove('color-black');
         document.querySelector('.color1').classList.add('color-white');
         document.querySelector('.color2').classList.remove('color-black');
@@ -24,5 +38,4 @@ function clicked() {
         document.querySelector('.color3').classList.remove('color-black');
         document.querySelector('.color3').classList.add('color-white');
     }
-
 }

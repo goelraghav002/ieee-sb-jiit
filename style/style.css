@@ -249,7 +249,7 @@ video{
         display: none;
     } */
 
-    nav .navContainer .links{
+    nav .navContainer .styles{
         position: absolute;
         background: #f1faee;
         margin: 0;
@@ -261,12 +261,14 @@ video{
         height: 100vh;
         width: 100%;
         overflow: hidden;
-        transition: max-width 0.4s;
+        /* transform: translateX(0%); */
+        transition: all 0.3s;
+
     }
 
-    /* nav .navContainer .none{
-        display: none;
-    } */
+    nav .navContainer .none{
+        visibility: hidden;
+    }
 
     .bar .color-white{
         background-color: #f1faee;
