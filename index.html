@@ -17,21 +17,23 @@
 		<!-- Animation Aos -->
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-
 		<!-- CSS -->
 		<link rel="stylesheet" href="style/style.css" />
 		<!-- CSS ends -->
-
-
 	</head>
 	<body class="noselect">
 		<!-- Navbar Start Here -->
-		<nav data-aos="fade-down" data-aos-easing="linear" data-aos-duration="750" data-aos-delay="500">
+		<nav
+			data-aos="fade-down"
+			data-aos-easing="linear"
+			data-aos-duration="750"
+			data-aos-delay="500"
+		>
 			<div class="navContainer">
 				<div class="logo">
 					<img src="images/jiit_logo.png" alt="" />
 				</div>
-				<div class="links">
+				<div class="links none" id="sideBar">
 					<div
 						class="link"
 						data-aos="fade-down"
@@ -39,47 +41,54 @@
 						data-aos-duration="1100"
 						data-aos-delay="500"
 					>
-						Home
+						<a href="">Home</a>
 					</div>
 					<div
 						class="link"
 						data-aos="fade-down"
 						data-aos-easing="linear"
 						data-aos-duration="1100"
-                        data-aos-delay="750"
+						data-aos-delay="750"
 					>
-						About Us
+						<a href="">About Us</a>
 					</div>
 					<div
 						class="link"
 						data-aos="fade-down"
 						data-aos-easing="linear"
 						data-aos-duration="1100"
-                        data-aos-delay="1000"
+						data-aos-delay="1000"
 					>
-						Our Events
+						<a href="">Our Events</a>
 					</div>
 					<div
 						class="link"
 						data-aos="fade-down"
 						data-aos-easing="linear"
 						data-aos-duration="1100"
-                        data-aos-delay="1250"
+						data-aos-delay="1250"
 					>
-						Team
+						<a href="">Team</a>
 					</div>
 					<div
 						class="link"
 						data-aos="fade-down"
 						data-aos-easing="linear"
 						data-aos-duration="1200"
-                        data-aos-delay="1500"
+						data-aos-delay="1500"
 					>
-						Contact Us
+						<a href="">Contact Us</a>
 					</div>
 				</div>
 				<div class="menu">
-					Menu
+					<!-- <img src="images/jiit_logo.png" width="50px" alt="Hello" id="menu"> -->
+					<label for="check" class="bar">
+						<input id="check" type="checkbox" name="check" value="yes">
+					
+						<span class="top color1 color-white"></span>
+						<span class="middle color2 color-white"></span>
+						<span class="bottom color3 color-white"></span>
+					</label>
 				</div>
 			</div>
 		</nav>
@@ -87,34 +96,53 @@
 
 		<!-- Header Starts Here -->
 		<header>
-            <div class="top">
-                <div class="tagline"  data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500" data-aos-delay="500">
-                    <span class="text">Imagination</span><br />
-                    <span class="text"> turns to</span><br />
-                    <span class="text">innovation.</span>
-                </div>
-                <div class="ieee-logo" data-aos="flip-right" data-aos-duration="1500" data-aos-delay="500">
-                    <img src="images/ieee_logo.webp" alt="" />
-                </div>
-            </div>
-			
-            <div class="bottom">
-                <video autoplay muted id="myVideo"><source src="https://d3kuxj311ts9a8.cloudfront.net/phoneView/video/Landing_mobile.mp4" type="video/mp4"></video>
-            </div>
+			<div class="top">
+				<div
+					class="tagline"
+					data-aos="fade-right"
+					data-aos-easing="linear"
+					data-aos-duration="1500"
+					data-aos-delay="500"
+				>
+					<span class="text">Imagination</span><br />
+					<span class="text"> turns to</span><br />
+					<span class="text">innovation.</span>
+				</div>
+				<div
+					class="ieee-logo"
+					data-aos="flip-right"
+					data-aos-duration="1500"
+					data-aos-delay="500"
+				>
+					<img src="images/ieee_logo.webp" alt="" />
+				</div>
+			</div>
 
+			<div class="bottom">
+				<video autoplay muted id="myVideo">
+					<source
+						src="https://d3kuxj311ts9a8.cloudfront.net/phoneView/video/Landing_mobile.mp4"
+						type="video/mp4"
+					/>
+				</video>
+			</div>
 
-            <div class="aboutUsBtn" data-aos-delay="500">
-                <button type="button">About Us</button>
-            </div>
+			<div class="aboutUsBtn" data-aos-delay="500">
+				<button type="button">About Us</button>
+			</div>
 		</header>
 		<!-- Header Ends Here -->
 
 		<!-- All Scripts -->
-		<!-- Aos Script -->
 
+		<!-- Aos Script -->
+		
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script>
 			AOS.init();
 		</script>
+
+
+		<script src="script.js"></script>
 	</body>
 </html>
