@@ -12,13 +12,6 @@ svg {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.86), #000000);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
 .footer {
   background-image: linear-gradient(to right top, #171c28, #181d28, #191f2d, #020e25, #0e1930, #010714, #161a21, #111520, #182853, #272b37, #212637, #191b21);
   color: #f9f1e9;
