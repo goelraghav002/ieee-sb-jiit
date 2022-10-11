@@ -1,17 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #fff;
     font-family: 'Quantico', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-body{
-    overflow-x: none;
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* No Select */
@@ -21,38 +27,42 @@ body{
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; 
+    user-select: none;
 }
+
 /* No Select ends */
 
 /* Scrollbar Css */
 body::-webkit-scrollbar {
     width: 0.1rem;
 }
+
 body::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
+
 body::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
+    background-color: rgb(95, 26, 26);
     outline: 1px solid slategrey;
 }
+
 /* Scrollbar Css ends */
 
-body{
-    background: #121113;
+body {
+    background: #000000;
     cursor: default;
 }
 
 
 /* Navbar */
-nav{
+nav {
     top: 0;
     position: sticky;
     z-index: 1000;
     background-color: #121113;
 }
 
-nav .navContainer{
+nav .navContainer {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -60,11 +70,11 @@ nav .navContainer{
     padding: 0.5rem 3rem;
 }
 
-nav .navContainer .logo img{
+nav .navContainer .logo img {
     width: 3rem;
 }
 
-nav .navContainer .links{
+nav .navContainer .links {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -72,26 +82,28 @@ nav .navContainer .links{
     cursor: pointer;
 }
 
-nav .navContainer .links .link{
+nav .navContainer .links .link {
+
     margin-left: 1.25rem;
     margin-right: 1.25rem;
 }
 
-nav .navContainer .links .link a:hover{
+nav .navContainer .links .link a:hover {
     text-decoration: underline;
+    text-decoration-color: crimson;
     transition: ease-in 2s;
 }
 
-nav .navContainer .menu{
+nav .navContainer .menu {
     display: none;
 }
 
-input[type = "checkbox"] {
+input[type="checkbox"] {
     -webkit-appearance: none;
     display: none;
     visibility: hidden;
 }
-  
+
 .bar {
     position: absolute;
     cursor: pointer;
@@ -101,7 +113,7 @@ input[type = "checkbox"] {
     height: 40px;
     z-index: 10000;
 }
-  
+
 .bar span {
     position: absolute;
     width: 40px;
@@ -112,20 +124,20 @@ input[type = "checkbox"] {
     transition: 0.3s ease;
     left: 0;
 }
-  
+
 .bar span.top {
     top: 0;
-  }
-  
+}
+
 .bar span.middle {
     top: 13px;
 }
-  
+
 .bar span.bottom {
     top: 26px;
 }
 
-input[type]:checked ~ span.top {
+input[type]:checked~span.top {
     transform: rotate(45deg);
     transform-origin: top left;
     width: 49px;
@@ -133,7 +145,7 @@ input[type]:checked ~ span.top {
     box-shadow: 0 0 10px #a5b9cc;
 }
 
-input[type]:checked ~ span.bottom {
+input[type]:checked~span.bottom {
     transform: rotate(-45deg);
     transform-origin: top left;
     top: 34px;
@@ -141,29 +153,30 @@ input[type]:checked ~ span.bottom {
     bottom: -1px;
     box-shadow: 0 0 10px #a5b9cc;
 }
-  
-input[type]:checked ~ span.middle {
+
+input[type]:checked~span.middle {
     transform: translateX(-20px);
     opacity: 0;
 }
+
 /* Navbar ends */
 
 
 /* Header starts */
-header{
+header {
     padding: 0 20rem;
     padding-top: 2.5rem;
     position: relative;
     min-height: 100vh;
 }
 
-header .top{
+header .top {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-header .top .tagline{
+header .top .tagline {
     position: relative;
     width: fit-content;
     z-index: 100;
@@ -172,19 +185,19 @@ header .top .tagline{
     padding-bottom: 2rem;
 }
 
-header .top .tagline .text{
+header .top .tagline .text {
     font-size: 4rem;
     line-height: 4rem;
     /* color: #eaeaea; */
 }
 
-header .top .ieee-logo img{
+header .top .ieee-logo img {
     width: 15rem;
 }
 
-header .aboutUsBtn button{
+header .aboutUsBtn button {
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
     right: 6%;
     outline: none;
     padding: 0.6rem 4rem;
@@ -198,17 +211,17 @@ header .aboutUsBtn button{
     cursor: pointer;
 }
 
-header .aboutUsBtn button:hover{
+header .aboutUsBtn button:hover {
     transition: ease-in 0.2s;
     background-color: #006EB6;
     color: #121113;
 }
 
-video{
+video {
     object-fit: contain;
 }
 
-#myVideo{
+#myVideo {
     position: absolute;
     left: 0;
     bottom: -7%;
@@ -217,39 +230,42 @@ video{
     z-index: -10000;
     transform: translateY(7%);
 }
+
 /* Header ends */
 
 @media only screen and (min-width: 1220px) {
-    header .top .tagline{
+    header .top .tagline {
         left: -10%;
     }
 }
 
 @media only screen and (max-width: 1220px) {
-    #myVideo{
+    #myVideo {
         bottom: 5%;
     }
 
-    header .top .tagline{
+    header .top .tagline {
         padding-right: 10rem;
     }
 }
+
 @media only screen and (max-width: 1000px) {
-    #myVideo{
+    #myVideo {
         bottom: 15%;
     }
 
-    header .top .tagline{
+    header .top .tagline {
         padding-right: 4rem;
     }
 }
+
 @media only screen and (max-width: 800px) {
-    
+
     /* nav .navContainer .links{
         display: none;
     } */
 
-    nav .navContainer .styles{
+    nav .navContainer .styles {
         position: absolute;
         background: #f1faee;
         margin: 0;
@@ -266,74 +282,74 @@ video{
 
     }
 
-    nav .navContainer .none{
+    nav .navContainer .none {
         visibility: hidden;
         overflow: hidden;
     }
 
-    .bar .color-white{
+    .bar .color-white {
         background-color: #f1faee;
     }
-    
-    .bar .color-black{
+
+    .bar .color-black {
         background-color: #121113;
     }
 
-    nav .navContainer .links .link{
+    nav .navContainer .links .link {
         margin-top: 0.1rem;
         margin-bottom: 0.1rem;
     }
 
-    nav .navContainer .links .link a{
+    nav .navContainer .links .link a {
         color: black;
     }
-    
-    #myVideo{
+
+    #myVideo {
         bottom: 15%;
     }
 
-    header .top .tagline{
+    header .top .tagline {
         padding-right: 4rem;
     }
 
-    nav .navContainer .menu{
+    nav .navContainer .menu {
         display: flex;
     }
 }
 
 @media only screen and (max-width: 660px) {
 
-    header .top{
+    header .top {
         flex-direction: column;
-    } 
+    }
 
-    header .top .tagline{
+    header .top .tagline {
         padding-right: 0rem;
     }
 
-    header{
+    header {
         padding: 1.8rem 0;
     }
 
-    header .top .tagline .text{
+    header .top .tagline .text {
         font-size: 2.5rem;
         line-height: 3rem;
     }
 
-    header .top .ieee-logo img{
+    header .top .ieee-logo img {
         width: 12rem;
         padding-bottom: 1rem;
     }
 
-    #myVideo{
+    #myVideo {
         bottom: 20%;
     }
-    
-    nav .navContainer{
+
+    nav .navContainer {
         padding: 1rem 1rem;
     }
 
-    .bar{
+    .bar {
         top: 1.5rem;
         right: 1rem;
     }
@@ -341,18 +357,18 @@ video{
 }
 
 @media only screen and (max-width: 500px) {
-    #myVideo{
+    #myVideo {
         bottom: 25%;
     }
 
-    .bar{
+    .bar {
         top: 1.8rem;
         right: 1rem;
     }
 }
 
 @media only screen and (max-width: 400px) {
-    header .aboutUsBtn button{
+    header .aboutUsBtn button {
         padding: 0.6rem 3rem;
         font-size: 1rem;
     }

@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
-
-
-body {
+#mtt {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(110.6deg, rgb(156, 116, 129) -18.3%, rgb(67, 54, 74) 16.4%, rgb(47, 48, 67) 68.2%, rgb(27, 23, 36) 99.1%);
+  background: black;
+  margin: 0;
+  text-align: center;
+  padding: 6rem 0 10rem 0;
 }
 
 section {
@@ -65,7 +66,7 @@ section {
   text-transform: uppercase;
   color: #fff;
   font-weight: 700;
-  font-size: 1.75em;
+  font-size: 1.25rem;
   transition: opacity 350ms;
   transition: all 0.3;
 }
@@ -83,7 +84,7 @@ section {
   box-shadow: 0 0 0.25rem .25rem var(--glow-color),
     0 0 0.25rem 0.25rem var(--glow-spread-color),
     inset 0 0 .25rem .25rem var(--glow-color);
-    filter: blur(0.5rem);
+  filter: blur(0.5rem);
 
 
 }
@@ -118,19 +119,19 @@ section {
 .honeycomb-cell:hover .honeycomb-cell_title {
   opacity: 0;
   box-shadow: 0 0 1em .25em var(--glow-color),
-  0 0 4em 2em var(--glow-spread-color),
-  inset 0 0 .75em .25em var(--glow-color);
-  
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 .75em .25em var(--glow-color);
+
 }
 
 .honeycomb-cell:hover .honeycomb-cell_img {
   filter: grayscale(0%);
-  
+
 }
 
 .honeycomb-cell:hover::after {
   opacity: 0;
-  
+
 }
 
 .honeycomb_Hidden {
@@ -190,5 +191,38 @@ section {
   .honeycomb_Hidden:nth-child(7n + 9),
   .honeycomb_Hidden:nth-child(7n + 11) {
     display: block;
+  }
+}
+
+#mtt h2 {
+  position: relative;
+  padding-top: 1rem;
+  font-size: 2.5rem;
+  color: #222;
+  display: inline;
+}
+
+#mtt h2::before {
+  content: attr(data-text);
+  position: absolute;
+  color: rgb(255, 255, 255);
+  width: 6.25rem;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #ffff;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  70%,
+  90% {
+    width: 100%;
   }
 }

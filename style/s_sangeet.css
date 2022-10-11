@@ -1,23 +1,22 @@
 .about {
+    min-height: 100vh;
     display: flex;
-    margin-bottom: 0;
-    padding-bottom: 0;
     flex-wrap: wrap;
 }
 
 .a_left {
     padding-top: 10rem;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
+    width: 40rem;
     height: 100vh;
-    width: 50%;
     background: rgb(0, 0, 0);
-    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(39, 40, 144, 1) 37%, rgba(0, 0, 0, 1) 50%);
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(39, 40, 144, 1) 37%, rgba(0, 0, 0, 1) 51%);
 }
 
 .logocont {
     text-align: center;
-    width: 21.00rem;
-    height: 21.00rem;
+    width: 350px;
+    height: 350px;
     outline: none;
     background: rgba(255, 255, 255, 0.15);
     margin: auto;
@@ -27,8 +26,7 @@
     flex: left;
 }
 
-.a_logo h3 {
-    padding: 0 5rem;
+.a_logo {
     font-size: 6rem;
     letter-spacing: 0;
     color: #0e3742;
@@ -50,7 +48,7 @@
     90.1%,
     92% {
         color: #0e3742;
-        text-shadow: 0 0 0.625rem #fff, 0 0 1.25rem #fff, 0 0 1.875rem #e60073, 0 0 2.5rem #1d13df, 0 0 3.125rem #1e04b1, 0 0 3.75rem #1d0f59, 0 0 4.375rem #000000;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #1d13df, 0 0 50px #1e04b1, 0 0 60px #1d0f59, 0 0 70px #000000;
     }
 
     18.1%,
@@ -64,11 +62,11 @@
     92.1%,
     100% {
         color: #fff;
-        text-shadow: 0 0 0.625rem #03bcf4,
-            0 0 1.25rem #03bcf4,
-            0 0 2.5rem #03bcf4,
-            0 0 5rem #03bcf4,
-            0 0 6.25rem #03bcf4,
+        text-shadow: 0 0 10px #03bcf4,
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 80px #03bcf4,
+            0 0 100px #03bcf4,
     }
 }
 
@@ -76,15 +74,9 @@
     width: 50%;
 }
 
-.a_right p {
-    font-size: 1.75rem;
-
-}
-
 canvas {
     position: absolute;
     z-index: -1;
-    left: 37%;
 }
 
 .a_text {
@@ -93,9 +85,13 @@ canvas {
     padding-right: 0;
 }
 
-/* .bottom {
-    margin-left: 3rem;
-    margin-bottom: 0;
+.a_text p {
+    width: 75%;
+}
+
+/* .bottom{
+margin-left: 3rem;
+margin-bottom:0;
 } */
 
 
@@ -122,12 +118,14 @@ canvas {
 
 .container .card {
     position: relative;
-    width: 17.5rem;
-    height: 25rem;
-    margin: 1.875rem;
-    box-shadow: 1.25rem 1.25rem 3.125rem rgba(0, 0, 0, 0.5);
-    border-radius: 1rem;
-    background-image: url(/images/ieee-logo.png);
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    object-fit:cover;
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -137,13 +135,15 @@ canvas {
     backdrop-filter: blur(5px);
 }
 
-.container .card .content {
+
+.container .card .content{
     padding: 20px;
     text-align: center;
     transform: translateY(100px);
     opacity: 0;
     transition: 0.5s;
 }
+
 
 .container .card:hover .content {
     transform: translateY(0px);
@@ -174,7 +174,7 @@ canvas {
 .container .card .content a {
     position: relative;
     display: inline-block;
-    padding: 0.5rem 1.25rem;
+    padding: 8px 20px;
     margin-top: 15px;
     background: #fff;
     color: #000;
@@ -187,12 +187,12 @@ canvas {
 .head {
     background-color: black;
     text-align: center;
-    padding: 2.5rem;
 }
 
 .head h2 {
+    padding-top: 1rem;
     position: relative;
-    font-size: 4em;
+    font-size: 2.5rem;
     color: #222;
     display: inline;
 }
@@ -208,6 +208,7 @@ canvas {
     animation: animate 3s linear infinite;
 }
 
+
 @keyframes animate {
 
     0%,
@@ -222,28 +223,12 @@ canvas {
     }
 }
 
-@media (max-width: 768px) {
-    .about {
-        flex-direction: column;
-    }
-
-    .a_right,
-    .a_left {
-        width: 100%;
-
-    }
-
+@media (max-width:768px) {
     .a_right {
-        padding: 0rem;
-        margin: 0;
-    }
-
-    .a_text {
-        margin: 0;
         width: 100%;
     }
 
-    .a_right p {
-        width: 200%;
+    .a_text p {
+        width: 100%;
     }
 }
