@@ -55,7 +55,7 @@ nav {
     top: 0;
     position: sticky;
     z-index: 1000;
-    background-color: #121113;
+    background-color: transparent;
 }
 
 nav .navContainer {
@@ -114,7 +114,7 @@ input[type="checkbox"] {
     position: absolute;
     width: 40px;
     height: 5px;
-    background: #f1faee;
+    background: transparent;
     border-radius: 100px;
     display: inline-block;
     transition: 0.3s ease;
@@ -221,8 +221,7 @@ video {
     position: absolute;
     left: 0;
     bottom: -7%;
-    width: 100% !important;
-    min-height: 10vh;
+    min-height: 100vh;
     z-index: -10000;
     transform: translateY(7%);
 }
@@ -238,6 +237,7 @@ video {
 @media only screen and (max-width: 1220px) {
     #myVideo {
         bottom: 5%;
+        height: 100vh;
     }
 
     header .top .tagline {
@@ -248,6 +248,7 @@ video {
 @media only screen and (max-width: 1000px) {
     #myVideo {
         bottom: 15%;
+        height: 100vh;
     }
 
     header .top .tagline {
@@ -302,6 +303,7 @@ video {
 
     #myVideo {
         bottom: 15%;
+        height: 100vh;
     }
 
     header .top .tagline {
@@ -339,6 +341,7 @@ video {
 
     #myVideo {
         bottom: 20%;
+        height: 100vh;
     }
 
     nav .navContainer {
@@ -355,6 +358,7 @@ video {
 @media only screen and (max-width: 500px) {
     #myVideo {
         bottom: 25%;
+        height: 100vh;
     }
 
     .bar {
